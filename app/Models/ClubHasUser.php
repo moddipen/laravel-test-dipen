@@ -8,8 +8,6 @@ class ClubHasUser extends Model
 {
     protected $fillable = ['user_id', 'club_id'];
 
-    protected $table='club_user';
-
     public function user()
     {
         return $this->belongsTo(User::class);
