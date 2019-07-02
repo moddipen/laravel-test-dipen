@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 use Yajra\DataTables\DataTables;
 
 class ClubController extends Controller
@@ -45,7 +47,7 @@ class ClubController extends Controller
             ->addColumn('action', function ($club) {
                 $html = '<form class="form-inline" id="form'.$club->id.'" action="'.route('clubs.destroy', $club->id).'"  method="post">';
                 if (Auth::user()->hasAnyPermission(['Login other'])) {
-                    $html .= '<a href="'.route('login.other', $this->encrypt($club->hasUser->user->id)).'" class = "btn btn-primary"><i class="fa fa-lock"></i></a>';
+                    $html .= '<a target="_blank" title="Login as '.$club->hasUser->user->name.'"  data-toggle="tooltip" data-placement="left" data-original-title="Login as '.$club->hasUser->user->name.'" href="'.route('login.other', $this->encrypt($club->hasUser->user->id)).'" class = "btn btn-primary"><i class="fa fa-lock"></i></a>';
                 }
                 if (Auth::user()->hasAnyPermission(['Club delete'])) {
                     $html .= ''.method_field("delete").csrf_field().'<button class="btn btn-danger" onclick="confirmDelete('.$club->id.')" type="button"><i class = "fa fa-trash "></i></button></form><script></script>';
