@@ -15,6 +15,9 @@ php artisan migrate
 ```
 php artisan db:seed
 ```
+```
+sudo chmod -R 777 storage/
+```
 
 ## Run project directly
 
