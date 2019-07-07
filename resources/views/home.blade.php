@@ -8,7 +8,7 @@
 
 {{-- page level styles --}}
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('public/assets/vendors/animate/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/animate/animate.min.css') }}">
     <meta name="_token" content="{{ csrf_token() }}">
 @stop
 
@@ -108,5 +108,5 @@
 
 {{-- page level scripts --}}
 @section('scripts')
-    <script src="{{ asset('public/assets/js/pages/dashboard.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/js/pages/dashboard.js') }}" type="text/javascript"></script>
 @stop

@@ -34,7 +34,7 @@
             <ul class="nav navbar-nav  list-inline">
                 <li class=" nav-item dropdown user user-menu">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <img src="{{ asset('public/assets/images/authors/no_avatar.jpg') }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left"/>
+                        <img src="{{ asset('assets/images/authors/no_avatar.jpg') }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left"/>
                         <div class="riot">
                             <div>
                                 <p class="user_name_max">{{ Auth::user()->name }}</p>
@@ -47,7 +47,7 @@
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header bg-light-blue">
-                            <img src="{{ asset('public/assets/images/authors/no_avatar.jpg') }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left"/>
+                            <img src="{{ asset('assets/images/authors/no_avatar.jpg') }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left"/>
                             
                             <p class="topprofiletext">{{ Auth::user()->name }}</p>
                         </li>

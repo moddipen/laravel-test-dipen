@@ -8,7 +8,6 @@ cp .env.example .env
 ```
 php artisan key:generate
 ```
-Set database and mailtrap credentials in .env file
 ```
 php artisan migrate
 ```
@@ -16,14 +15,10 @@ php artisan migrate
 php artisan db:seed
 ```
 ```
-sudo chmod -R 777 storage/
+php artisan serve
 ```
 
-## Run project directly
-
-http://localhost/laravel-test-dipen
-
-####Super admin credentials
+##Super admin credentials
 
 Email: admin1@yopmail.com
 
